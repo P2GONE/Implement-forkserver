@@ -40,17 +40,34 @@ void init_forkserver() {
 }
 
 void run_target(char **argv) {
-    child_pid = fork();
+    pid_t child_pid = fork();
     if (child_pid < 0) {
-        perror("fork");
+        perror("fork failed");
         exit(1);
+    } 
+    else if (child == 0){
+        printf("[Child] Process created successfully! PID: %d\n", getpid());
+        if (execv(argv[0], argv) < 0) {
+            perror("execv failed");
+            exit(1); 
+        }
     }
+    else {
+        printf("[Parent] Created child process. Parent PID: %d, Child PID: %d\n",
+                    getpid(), child_pid);
 
-    if (child_pid == 0) {
-        // 자식 프로세스
-        execv(argv[0], argv);
-        perror("execv");
-        exit(1);
+        int status;
+        if (waitpid(child_pid, &status, 0) < 0) {
+            perror("waitpid failed");
+            exit(1);
+        }
+        
+        // 자식 종료 상태 확인
+        if (WIFEXITED(status)) {
+            printf("[Parent] Child exited with status: %d\n", WEXITSTATUS(status));
+        } else if (WIFSIGNALED(status)) {
+            printf("[Parent] Child was killed by signal: %d\n", WTERMSIG(status));
+        }
     }
 
     wait(NULL); // 자식 프로세스 대기

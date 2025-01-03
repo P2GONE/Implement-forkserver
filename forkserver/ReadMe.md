@@ -12,3 +12,5 @@ forkserver_project/
 ├── timeout.c              // 타임아웃 설정 구현
 ```
 
+### How to Run
+./forkserver ./target_program
