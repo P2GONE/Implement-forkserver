@@ -20,8 +20,9 @@ int main(int argc, char **argv) {
     init_forkserver();
 
     while (1) {
-        set_timeout(2); // 타임아웃 설정
+        //set_timeout(2); // 타임아웃 설정
         run_target(&argv[1]);
+        sleep(2);
     }
 
     cleanup_shared_memory();

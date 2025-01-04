@@ -45,7 +45,7 @@ void run_target(char **argv) {
         perror("fork failed");
         exit(1);
     } 
-    else if (child == 0){
+    else if (child_pid == 0){
         printf("[Child] Process created successfully! PID: %d\n", getpid());
         if (execv(argv[0], argv) < 0) {
             perror("execv failed");
@@ -70,5 +70,4 @@ void run_target(char **argv) {
         }
     }
 
-    wait(NULL); // 자식 프로세스 대기
 }
