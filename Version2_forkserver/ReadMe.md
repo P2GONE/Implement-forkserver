@@ -15,14 +15,19 @@
 ## RUN
 ```
 Forkserver started. Waiting for testcases...
-Enter testcase (or 'exit' to quit): hello
-Received input: hello
+Enter testcase (or 'exit' to quit): AA
+Forked child process with PID: 1217
+Received input: AA
 Testcase executed successfully.
+Enter testcase (or 'exit' to quit): AAAAAAAAAA
+Forked child process with PID: 1218
+Received input: AAAAAAAAAA
 Testcase executed successfully.
-Enter testcase (or 'exit' to quit): crash
-Crashing as per input...
+Enter testcase (or 'exit' to quit): AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+Forked child process with PID: 1219
+Received input: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+*** stack smashing detected ***: terminated
 Testcase caused a crash!
-Testcase executed successfully.
 Enter testcase (or 'exit' to quit): exit
 Exiting forkserver.
 ```
