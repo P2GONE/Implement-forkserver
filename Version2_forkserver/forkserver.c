@@ -78,6 +78,7 @@ void run_target(char *input, int *status) {
         perror("execl failed");
         exit(1);
     } else {
+        printf("Forked child process with PID: %d\n", pid);
         // 부모 프로세스: 자식 프로세스의 상태 대기
         int wstatus;
         waitpid(pid, &wstatus, 0);
