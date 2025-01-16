@@ -17,11 +17,11 @@ int main(int argc, char **argv) {
 
     init_shared_memory();
     init_timeout_handler(timeout_handler);
-    init_forkserver();
+    init_forkserver(&argv[1]);
 
     while (1) {
         //set_timeout(2); // 타임아웃 설정
-        run_target(&argv[1]);
+        run_target();
         sleep(2);
     }
     
