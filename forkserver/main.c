@@ -24,7 +24,8 @@ int main(int argc, char **argv) {
         run_target(&argv[1]);
         sleep(2);
     }
-
+    
+    shutdown_fork_server();
     cleanup_shared_memory();
     return 0;
 }
