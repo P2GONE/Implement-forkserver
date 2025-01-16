@@ -16,7 +16,7 @@ forkserver_project/
 make
 ```
 ### How to Run
-./forkserver ./target_program
+./forkserver ./target
 
 ### RUN
 ```
