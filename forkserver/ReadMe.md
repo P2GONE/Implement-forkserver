@@ -20,41 +20,18 @@ make
 
 ### RUN
 ```
+ppp@BOOK-P8S5GA5SGE:~/Implement-forkserver/Implement-forkserver/forkserver$ ./forkserver ./target
 Forkserver initialized.
-[Parent] Created child process. Parent PID: 2436, Child PID: 2438
-[Child] Process created successfully! PID: 2438
-HI, this is test programCould You exploit my program?[Parent] Created child process. Parent PID: 2437, Child PID: 2439
-[Child] Process created successfully! PID: 2439
-HI, this is test programCould You exploit my program?
-AAAAAAAAA
-[Parent] Child exited with status: 1
-AAAAAAAAAAAAAAAAA
-[Parent] Child exited with status: 1
-[Parent] Created child process. Parent PID: 2436, Child PID: 2440
-[Child] Process created successfully! PID: 2440
-HI, this is test programCould You exploit my program?[Parent] Created child process. Parent PID: 2437, Child PID: 2441
-[Child] Process created successfully! PID: 2441
-HI, this is test programCould You exploit my program?
-BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
-[Parent] Child exited with status: 1
-B=[Child] Process created successfully! PID: 2442
-[Parent] Created child process. Parent PID: 2437, Child PID: 2442
-HI, this is test programCould You exploit my program
-[Parent] Child exited with status: 1
-AAAAAAAAAAAAAAAAAAA
-[Parent] Child exited with status: 1
-[Parent] Created child process. Parent PID: 2436, Child PID: 2443
-[Child] Process created successfully! PID: 2443
-HI, this is test programCould You exploit my program?[Parent] Created child process. Parent PID: 2437, Child PID: 2444
-[Child] Process created successfully! PID: 2444
-HI, this is test programCould You exploit my program?
-DDDDDDDDDDD
-[Parent] Child exited with status: 1
-[Parent] Created child process. Parent PID: 2437, Child PID: 2445
-[Child] Process created successfully! PID: 2445
-HI, this is test programCould You exploit my program?
-UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU
-[Parent] Child exited with status: 1
-[Parent] Created child process. Parent PID: 2436, Child PID: 2446
-[Child] Process created successfully! PID: 2446
+Enter input: AAAAAAAAAAAAA
+You entered: AAAAAAAAAAAAA
+[Parent] Child exited with status: 0
+VVVVVVVVVVVEnter input: VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
+You entered: VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
+[Parent] Child exited with status: 0
+EEEEEEnter input: EEEEEEEEEEEEEEEEEE
+You entered: EEEEEEEEEEEEEEEEEEEEEEE
+[Parent] Child exited with status: 0
+Enter input: BBBBBBB
+You entered: BBBBBBB
+[Parent] Child exited with status: 0
 ```
