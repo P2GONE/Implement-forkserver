@@ -1,7 +1,8 @@
 #ifndef FORKSERVER_H
 #define FORKSERVER_H
 
-void init_forkserver(void);
-void run_target(char **argv);
+void init_forkserver(char **argv);
+void run_target();
+void shutdown_fork_server();
 
 #endif // FORKSERVER_H
